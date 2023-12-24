@@ -1,0 +1,24 @@
+/_build
+/cover
+/deps
+/doc
+/.fetch
+erl_crash.dump
+*.ez
+*.beam
+/config/*.secret.exs
+.elixir_ls/
+# Ignore package tarball (built via "mix hex.build")
+project_name-*.tar
+# The directory NPM writes packages info to
+/assets/node_modules/
+# Since we are building assets from assets/,
+# we ignore priv/static/. You may want to comment
+# this depending on your deployment strategy.
+/priv/static/
+# Ignore .DS_Store files (Mac metadata)
+.DS_Store
+# Ignore files from JetBrains IDEs (e.g., IntelliJ, RubyMine, PhpStorm, etc)
+.idea/
+# Ignore files from Visual Studio Code
+.vscode/
