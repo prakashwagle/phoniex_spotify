@@ -23,7 +23,7 @@ defmodule PhoniexSpotifyWeb.Router do
   # Other scopes may use custom stacks.
   scope "/api", PhoniexSpotifyWeb do
     pipe_through :api
-    resources("/tasks", TaskController)
+    post "/ask", ApiController, :ask
   end
 
   # Enable LiveDashboard and Swoosh mailbox preview in development

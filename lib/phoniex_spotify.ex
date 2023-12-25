@@ -8,12 +8,12 @@ defmodule PhoniexSpotify do
   """
   alias PhoniexSpotify.Task
   @tasks MapSet.new();
-  def add(task) when is_map(task) do
-    put_in(@tasks, Enum.into([task], :id))
+  def add(tasks, task) when is_map(task) do
+    MapSet.put(tasks, task)
   end
 
-  def delete(%Task{id: id}) do
-    @tasks = MapSet.delete(@tasks, id)
+  def delete(tasks, task_id) do
+    MapSet.delete(tasks, task_id)
   end
 
   def list(), do: MapSet.to_list(@tasks)
