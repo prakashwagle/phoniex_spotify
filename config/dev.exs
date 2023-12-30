@@ -3,9 +3,10 @@ import Config
 # Configure your database
 config :phoniex_spotify, PhoniexSpotify.Repo,
   username: "postgres",
-  password: "postgres",
+  password: "tiger123",
   hostname: "localhost",
-  database: "phoniex_spotify_dev",
+  database: "postgres",
+  port: "55000",
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
@@ -19,7 +20,7 @@ config :phoniex_spotify, PhoniexSpotify.Repo,
 config :phoniex_spotify, PhoniexSpotifyWeb.Endpoint,
   # Binding to loopback ipv4 address prevents access from other machines.
   # Change to `ip: {0, 0, 0, 0}` to allow access from other machines.
-  http: [ip: {127, 0, 0, 1}, port: 4000],
+  http: [ip: {127, 0, 0, 1}, port: 4004],
   check_origin: false,
   code_reloader: true,
   debug_errors: true,
