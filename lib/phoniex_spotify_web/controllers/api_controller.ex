@@ -7,7 +7,6 @@ defmodule PhoniexSpotifyWeb.ApiController do
     response = PhoniexSpotifyWeb.OllamaHelper.call_api(url, query)
     case response do
       {:ok, response} ->
-        IO.inspect("Response: "<>response)
         body = Poison.decode!(response)
         result = body["response"]
         send_resp(conn, 200, "#{result} ?")
