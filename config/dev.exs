@@ -81,3 +81,8 @@ config :phoenix_live_view, :debug_heex_annotations, true
 
 # Disable swoosh api client as it is only required for production adapters.
 config :swoosh, :api_client, false
+
+#Urls for base ollama server
+config :phoniex_spotify, PhoniexSpotifyWeb.OllamaHelper,
+  url: "http://127.0.0.1:11434/api/generate",
+  query: "Generate a brief 3-5 word title for this question, excluding the term 'title.' Then, please reply to following question: "

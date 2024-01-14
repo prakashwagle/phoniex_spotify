@@ -34,6 +34,8 @@ defmodule PhoniexSpotify.MixProject do
     [
       {:phoenix, "~> 1.7.10"},
       {:phoenix_ecto, "~> 4.4"},
+      {:httpoison, "~> 1.8"},
+      {:poison, "~> 4.0"}, # Add the Poison dependency
       {:ecto_sql, "~> 3.10"},
       {:postgrex, ">= 0.0.0"},
       {:phoenix_html, "~> 3.3"},
